@@ -429,9 +429,9 @@ body {
 /* Sidebar Styles */
 .sidebar {
   position: absolute;
-  top: 0;
+  top: 200px;
   left: 0;
-  height: 100%;
+  height: calc(100% - 200px);
   width: 260px;
   background: none !important;
   box-shadow: none !important;
@@ -579,8 +579,8 @@ body {
   overflow: hidden;
 }
 .hero-bg {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -635,25 +635,103 @@ body {
 .hero-slider-dots {
   position: absolute;
   left: 50%;
-  bottom: 30px;
+  bottom: 90px;
   transform: translateX(-50%);
-  z-index: 10;
+  z-index: 1001;
   display: flex;
   gap: 10px;
+  background: none;
+  box-shadow: none;
 }
 .hero-slider-dots .dot {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #fff;
-  opacity: 0.5;
-  border: 2px solid #1ca15c;
+  background: #000;
+  opacity: 0.7;
+  border: none;
   cursor: pointer;
   transition: opacity 0.3s, background 0.3s;
 }
 .hero-slider-dots .dot.active {
   opacity: 1;
-  background: #1ca15c;
+  background: #fff;
+}
+.hero-slider-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: rgba(0,128,0,0.08);
+  z-index: 20;
+  overflow: hidden;
+}
+.hero-slider-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #1ca15c 0%, #7be495 100%);
+  transition: width 0.3s linear;
+}
+.whatsapp-fab {
+  position: fixed;
+  left: 32px;
+  bottom: 32px;
+  width: 76px;
+  height: 76px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  z-index: 1000;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: whatsapp-fab-up 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.whatsapp-fab img {
+  width: 44px;
+  height: 44px;
+}
+.whatsapp-fab:hover {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.25);
+}
+@keyframes whatsapp-fab-up {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.down-arrow-fab {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  animation: arrow-bounce 1.2s infinite;
+}
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+}
+.down-arrow-fab svg {
+  width: 56px;
+  height: 56px;
+  display: block;
+}
+.hero-bottom-fade {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to top, #fff 80%, transparent 100%);
+  z-index: 21;
+  pointer-events: none;
 }
 
 /* Responsive */
