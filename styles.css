@@ -155,7 +155,7 @@ body {
 
 .services h2 {
   font-size: 2rem;
-  color: #0072ff;
+  color: #0a174e;
   margin-bottom: 2.5rem;
   font-weight: 700;
 }
@@ -181,7 +181,7 @@ body {
 
 .service-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 6px 24px rgba(0,114,255,0.10);
+  box-shadow: 0 6px 24px rgba(255,45,45,0.15);
 }
 
 .service-icon {
@@ -191,7 +191,7 @@ body {
 
 .service-card h3 {
   font-size: 1.25rem;
-  color: #0072ff;
+  color: #0a174e;
   margin-bottom: 0.75rem;
   font-weight: 600;
 }
@@ -224,7 +224,7 @@ body {
 
 .about h2 {
   font-size: 2rem;
-  color: #0072ff;
+  color: #0a174e;
   margin-bottom: 2rem;
   font-weight: 700;
 }
@@ -249,7 +249,7 @@ body {
   border-radius: 8px;
   padding: 1rem 2rem;
   font-size: 1rem;
-  color: #0072ff;
+  color: #0a174e;
   font-weight: 500;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
@@ -277,7 +277,7 @@ body {
 
 .contact h2 {
   font-size: 2rem;
-  color: #0072ff;
+  color: #0a174e;
   margin-bottom: 2rem;
   font-weight: 700;
 }
@@ -302,7 +302,7 @@ body {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border: 1.5px solid #0072ff;
+  border: 1.5px solid #ff2d2d;
   outline: none;
 }
 
@@ -311,7 +311,7 @@ body {
 }
 
 .footer {
-  background: #0072ff;
+  background: #0a174e;
   color: #fff;
   padding: 1.5rem 0;
   text-align: center;
@@ -348,10 +348,18 @@ body {
   align-items: center;
   gap: 1rem;
 }
-.logo-img {
+.logo-svg {
   width: 60px;
   height: 60px;
-  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-svg svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 .logo-text {
   display: flex;
@@ -361,7 +369,7 @@ body {
 .logo-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #1ca15c;
+  color: #0a174e;
   letter-spacing: 1px;
 }
 .logo-tagline {
@@ -381,7 +389,7 @@ body {
   transition: color 0.2s;
 }
 .main-nav ul li a:hover {
-  color: #1ca15c;
+  color: #ff2d2d;
 }
 .header-actions {
   display: flex;
@@ -390,8 +398,8 @@ body {
 }
 .enquiry-btn {
   background: none;
-  border: 2px solid #ff6600;
-  color: #ff6600;
+  border: 2px solid #ff2d2d;
+  color: #ff2d2d;
   font-weight: 600;
   border-radius: 30px;
   padding: 0.5rem 1.5rem;
@@ -403,7 +411,7 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 .enquiry-btn:hover {
-  background: #ff6600;
+  background: #ff2d2d;
   color: #fff;
 }
 .enquiry-icon {
@@ -663,14 +671,14 @@ body {
   bottom: 0;
   width: 100%;
   height: 7px;
-  background: rgba(0,128,0,0.08);
+  background: rgba(10,23,78,0.08);
   z-index: 20;
   overflow: hidden;
 }
 .hero-slider-progress-bar {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, #1ca15c 0%, #7be495 100%);
+  background: linear-gradient(90deg, #ff2d2d 0%, #0a174e 100%);
   transition: width 0.3s linear;
 }
 .whatsapp-fab {
@@ -842,7 +850,7 @@ body {
 }
 .product-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 6px 24px rgba(0,114,255,0.10);
+  box-shadow: 0 6px 24px rgba(255,45,45,0.15);
 }
 .product-card img {
   width: 100px;
@@ -903,7 +911,7 @@ body {
     font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: #1ca15c;
+    color: #0a174e;
 }
 .contact-info p {
     font-size: 1.1rem;
@@ -911,7 +919,7 @@ body {
     color: #222;
 }
 .contact-info a {
-    color: #0072ff;
+    color: #ff2d2d;
     text-decoration: none;
     word-break: break-all;
 }
