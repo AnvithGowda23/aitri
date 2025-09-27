@@ -380,6 +380,7 @@ body {
   display: flex;
   gap: 2rem;
   list-style: none;
+  margin-left: 5rem;
 }
 .main-nav ul li a {
   text-decoration: none;
@@ -388,13 +389,84 @@ body {
   font-size: 1.1rem;
   transition: color 0.2s;
 }
-.main-nav ul li a:hover {
+/* Dropdown Menu Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, color 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+.dropdown-menu li:last-child a {
+  border-bottom: none;
+}
+
+.dropdown-menu li a:hover {
+  background: #f8f9fa;
   color: #ff2d2d;
+}
+
+.main-nav ul li a:hover {
+  background: linear-gradient(45deg, #ff2d2d, #0a174e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .header-actions {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  position: relative;
+}
+.header-actions::before {
+  content: '';
+  position: absolute;
+  left: -0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 30px;
+  background: #ddd;
 }
 .enquiry-btn {
   background: none;
@@ -421,7 +493,7 @@ body {
   font-size: 1.1rem;
   color: #222;
   cursor: pointer;
-  display: flex;
+  display: none;
   align-items: center;
   gap: 0.3rem;
 }
@@ -783,6 +855,9 @@ body {
   .hero-phone-img img {
     width: 220px;
   }
+  .explore-menu {
+    display: flex;
+  }
 }
 
 .map-animate-container {
@@ -1126,13 +1201,18 @@ body {
 }
 .btn-read-more {
   display: inline-block;
-  padding: 0.75rem 1.4rem;
+  padding: 0.5rem 1rem;
   background: #ff2d2d;
   color: #fff;
-  border-radius: 28px;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 8px 24px rgba(255,45,45,0.25);
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(255,45,45,0.25);
+}
+.btn-read-more::after {
+  content: ' →';
+  margin-left: 0.3rem;
 }
 .btn-read-more:hover {
   background: #e82626;
